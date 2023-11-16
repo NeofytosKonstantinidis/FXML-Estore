@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="40.0" prefWidth="185.0" stylesheets="@../../values/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.CartItemController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="64.0" prefWidth="170.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="40.0" prefWidth="25.0">
+               <children>
+                  <Label alignment="BOTTOM_CENTER" onMouseClicked="#addCartQuantity" text="▲" textAlignment="CENTER">
+                     <font>
+                        <Font name="Cambria" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="quantity" layoutX="16.0" layoutY="22.0" text="1x">
+                     <font>
+                        <Font name="Cambria" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="16.0" layoutY="14.0" onMouseClicked="#reduceCartQuantity" text="▼">
+                     <font>
+                        <Font name="Cambria" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </VBox>
+            <Label fx:id="name" prefHeight="41.0" prefWidth="54.0" text="Medium Box" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Cambria" size="11.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="cartItemImage" fitHeight="31.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/itemphoto.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="price" layoutX="52.0" layoutY="16.0" prefHeight="41.0" prefWidth="48.0" text="199.99€">
+               <font>
+                  <Font name="Cambria" size="12.0" />
+               </font>
+            </Label>
+            <Label onMouseClicked="#removeCartItem" text="X" textFill="#eb0000">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+   <styleClass>
+      <String fx:value="cartitem" />
+      <String fx:value="shadow" />
+   </styleClass>
+</AnchorPane>

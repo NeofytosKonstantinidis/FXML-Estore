@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ShopController">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="600.0" styleClass="top-bar" stylesheets="@../../values/style.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#openShop" text="Shop" textFill="#686868">
+                            <font>
+                                <Font name="Cambria" size="24.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="10.0" right="10.0" />
+                            </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                        </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="19.0" onMouseClicked="#openTrackOrder" text="Track Order" textFill="#686868">
+                     <font>
+                        <Font name="Cambria" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="216.0">
+                            <children>
+                                <TextField fx:id="searchfield" prefHeight="28.0" prefWidth="141.0" promptText="Type here to search" styleClass="transparent">
+                                    <font>
+                                        <Font name="Cambria" size="14.0" />
+                                    </font>
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor>
+                                </TextField>
+                                <Button mnemonicParsing="false" onMouseClicked="#searchClicked" prefHeight="28.0" prefWidth="73.0" styleClass="search-button" text="Search" textFill="WHITE">
+                                    <font>
+                                        <Font name="Cambria" size="14.0" />
+                                    </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                                </Button>
+                            </children>
+                            <HBox.margin>
+                                <Insets bottom="10.0" top="10.0" />
+                            </HBox.margin>
+                            <padding>
+                                <Insets left="10.0" />
+                            </padding>
+                            <styleClass>
+                                <String fx:value="search-box" />
+                                <String fx:value="shadow" />
+                            </styleClass>
+                        </HBox>
+                  <Label onMouseClicked="#openMainScene" text="Log Out" textFill="#686868">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                        <Pane prefHeight="48.0" prefWidth="398.0" HBox.hgrow="ALWAYS" />
+                        <HBox alignment="CENTER_LEFT" onMouseClicked="#openCart" prefHeight="48.0" prefWidth="76.0">
+                            <children>
+                                <Label text="Cart" textFill="#686868">
+                                    <font>
+                                        <Font name="Cambria" size="14.0" />
+                                    </font>
+                                </Label>
+                                <ImageView fitHeight="22.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../Images/checkout.png" />
+                                    </image>
+                                </ImageView>
+                                <Label fx:id="checkoutItems" alignment="TOP_CENTER" text="0" textFill="#5b5a5a">
+                                    <font>
+                                        <Font size="10.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                        </HBox>
+                    </children>
+                </HBox>
+            </top>
+        </BorderPane>
+      <HBox alignment="CENTER" layoutY="48.0" prefHeight="554.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="46.0">
+         <children>
+                  <ScrollPane fx:id="scroll" prefHeight="554.0" prefWidth="928.0" styleClass="transparent" stylesheets="@../../values/style.css">
+                      <content>
+                          <GridPane fx:id="grid" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="0.0" prefWidth="22.0">
+                          </GridPane>
+                      </content>
+                  </ScrollPane>
+         </children>
+      </HBox>
+      <HBox fx:id="cartbox" alignment="TOP_CENTER" layoutX="787.0" layoutY="46.0" prefHeight="255.0" prefWidth="185.0" stylesheets="@../../values/style.css" AnchorPane.leftAnchor="787.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="251.0" prefWidth="216.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="151.0" text="Items" textAlignment="CENTER">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ScrollPane prefHeight="185.0" prefWidth="218.0" style="-fx-background-color: transparent;" styleClass="scroll-pane">
+                     <content>
+                        <GridPane fx:id="cartGrid">
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+                  <Button mnemonicParsing="false" onMouseClicked="#gotocheckout" prefHeight="28.0" prefWidth="79.0" styleClass="search-button" text="Checkout" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <styleClass>
+                  <String fx:value="white" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </VBox>
+         </children>
+         <styleClass>
+            <String fx:value="transparent" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </HBox>
+    </children>
+</AnchorPane>

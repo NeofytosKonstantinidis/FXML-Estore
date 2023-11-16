@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="545.0" prefWidth="900.0" stylesheets="@../../values/style.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="sample.controller.TrackOrderController">
+   <children>
+      <HBox alignment="TOP_CENTER" layoutX="350.0" layoutY="223.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="545.0" prefWidth="352.0">
+               <children>
+                  <Label text="Search Your Order" textFill="#838282">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="70.0" right="70.0" />
+                     </VBox.margin>
+                     <children>
+                        <TextField fx:id="searchOrderInput" prefHeight="28.0" prefWidth="151.0" promptText="Type Tracking Number" styleClass="transparent">
+                           <font>
+                              <Font name="Cambria" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </TextField>
+                        <Button mnemonicParsing="false" onMouseClicked="#searchOrderClicked" styleClass="search-button" text="Search" textFill="WHITE">
+                           <font>
+                              <Font name="Cambria" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                     <styleClass>
+                        <String fx:value="search-box" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </HBox>
+                  <ScrollPane fx:id="trackingContent" prefHeight="412.0" prefWidth="352.0" styleClass="transparent" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

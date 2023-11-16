@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@../../values/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.StoreViewController">
+   <children>
+      <HBox alignment="CENTER" layoutX="340.0" layoutY="119.0" prefHeight="481.0" prefWidth="660.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
+         <children>
+            <ScrollPane prefHeight="600.0" prefWidth="661.0" styleClass="transparent">
+               <content>
+                  <GridPane fx:id="ordersList">
+                  </GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="120.0" prefWidth="660.0" AnchorPane.bottomAnchor="480.0" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Total Income: " textFill="#515151">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalIncomeLabel" layoutX="285.0" layoutY="59.0" text="00.000,00€" textFill="#515151">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="243.0" layoutY="59.0" text="Total Orders: " textFill="#515151">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="totalOrdersLabel" layoutX="353.0" layoutY="59.0" text="000" textFill="#515151">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="378.0" layoutY="59.0" text="Sold Products: " textFill="#515151">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="soldProductsLabel" layoutX="484.0" layoutY="59.0" text="000" textFill="#515151">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="69.0" layoutY="132.0" prefHeight="600.0" prefWidth="341.0" styleClass="top-bar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="660.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ScrollPane fx:id="orderDetails" prefHeight="600.0" prefWidth="341.0" styleClass="transparent" />
+         </children>
+      </HBox>
+      <Label onMouseClicked="#logOut" text="Log Out" textFill="#686868" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+</AnchorPane>

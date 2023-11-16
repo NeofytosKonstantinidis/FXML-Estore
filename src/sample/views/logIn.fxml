@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.LogInController">
+   <children>
+      <HBox alignment="CENTER" layoutY="7.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox fx:id="storeSide" alignment="CENTER" onMouseClicked="#storeSideClicked" onMouseEntered="#storeSideHovered" onMouseExited="#storeSideExited" prefHeight="600.0" prefWidth="502.0">
+               <children>
+                  <Label text="Store Side" textFill="#575656">
+                     <font>
+                        <Font name="Cambria Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../Images/storeSideIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox fx:id="customerSide" alignment="CENTER" onMouseClicked="#customerSideClicked" onMouseEntered="#customerSideHovered" onMouseExited="#customerSideExited" prefHeight="600.0" prefWidth="502.0">
+               <children>
+                  <Label text="Customer Side" textFill="#575656">
+                     <font>
+                        <Font name="Cambria Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../Images/customerSideIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

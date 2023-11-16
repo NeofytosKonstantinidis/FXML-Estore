@@ -1,0 +1,40 @@
+.search-box{
+    -fx-background-color:#FFFFFF;
+    -fx-background-radius:100;
+}
+.transparent{
+    -fx-background-color:rgba(0,0,0,0);
+}
+.search-button{
+    -fx-background-color: #828282;
+    -fx-background-radius: 30;
+}
+.top-bar{
+    -fx-background-color: #D3D3D3;
+}
+.shadow{
+    -fx-effect:dropShadow(three-pass-box, rgba(0,0,0,0.1), 10.0, 0.0, 0.0, 10.0);
+}
+.add-btn{
+    -fx-background-color:#828282;
+    -fx-background-radius:100;
+}
+.item{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 30;
+}
+.cartitem{
+    -fx-background-color: #ffffff;
+}
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+.white{
+    -fx-background-color: #ffffff;
+}
+.form{
+    -fx-background-radius: 30;
+}
+.separator{
+    -fx-background-color:#000000;
+}

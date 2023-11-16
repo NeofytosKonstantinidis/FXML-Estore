@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="514.0" prefWidth="920.0" stylesheets="@../../values/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.OrderReceiptController">
+    <children>
+        <HBox alignment="TOP_CENTER" layoutX="165.0" layoutY="140.0" prefHeight="167.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+            <children>
+                <VBox alignment="TOP_CENTER" prefHeight="514.0" prefWidth="354.0" style="-fx-background-color: #e6e6e6;">
+                    <children>
+                  <VBox fx:id="printNode" alignment="TOP_CENTER">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <VBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </VBox.margin>
+                           <children>
+                                    <Label text="Order " textFill="#6f6f6f">
+                                        <font>
+                                            <Font name="Cambria Bold" size="24.0" />
+                                        </font>
+                                    </Label>
+                              <Label fx:id="orderNumber" layoutX="110.0" layoutY="10.0" text="#2021510100" textFill="#6f6f6f">
+                                 <font>
+                                    <Font name="Cambria Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                              <HBox alignment="CENTER" prefHeight="150.0" prefWidth="305.0">
+                                  <children>
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                            <Label text="Firstname:" textAlignment="RIGHT" textFill="#6f6f6f">
+                                                <font>
+                                                    <Font name="Cambria" size="14.0" />
+                                                </font>
+                                            </Label>
+                                    <Label fx:id="firstname" text="Name" textFill="#6f6f6f" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </Label>
+                                            <Label text="Lastname:" textAlignment="RIGHT" textFill="#6f6f6f" GridPane.rowIndex="1">
+                                                <font>
+                                                    <Font name="Cambria" size="14.0" />
+                                                </font>
+                                            </Label>
+                                    <Label fx:id="lastname" text="Lastname" textFill="#6f6f6f" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </Label>
+                                            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Address:" textAlignment="RIGHT" textFill="#6f6f6f" GridPane.rowIndex="2">
+                                                <font>
+                                                    <Font name="Cambria" size="14.0" />
+                                                </font>
+                                       <padding>
+                                          <Insets left="8.0" />
+                                       </padding>
+                                            </Label>
+                                    <Label fx:id="address" text="Address" textFill="#6f6f6f" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </Label>
+                                            <Label text="City:" textFill="#6f6f6f" GridPane.rowIndex="3">
+                                                <font>
+                                                    <Font name="Cambria" size="14.0" />
+                                                </font>
+                                       <padding>
+                                          <Insets left="33.0" />
+                                       </padding>
+                                            </Label>
+                                    <Label fx:id="city" text="City" textFill="#6f6f6f" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </Label>
+                                            <Label text="Country:" textFill="#6f6f6f" GridPane.rowIndex="4">
+                                                <font>
+                                                    <Font name="Cambria" size="14.0" />
+                                                </font>
+                                       <GridPane.margin>
+                                          <Insets left="8.0" />
+                                       </GridPane.margin>
+                                            </Label>
+                                    <Label fx:id="country" text="Country" textFill="#6f6f6f" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="Cambria" size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                                  </children>
+                              </HBox>
+                              <HBox alignment="CENTER">
+                                  <children>
+                                      <ScrollPane prefHeight="182.0" prefWidth="255.0" styleClass="transparent">
+                                          <content>
+                                              <GridPane fx:id="orderGrid">
+                                        </GridPane>
+                                          </content>
+                                      </ScrollPane>
+                                  </children>
+                              </HBox>
+                              <HBox alignment="CENTER">
+                                  <children>
+                                      <Label text="Total: " textFill="#6f6f6f">
+                                          <font>
+                                              <Font name="Cambria Bold" size="14.0" />
+                                          </font>
+                                          <HBox.margin>
+                                              <Insets left="120.0" />
+                                          </HBox.margin>
+                                      </Label>
+                                      <Label fx:id="totalCost" layoutX="10.0" layoutY="10.0" text="999.99€" textFill="#6f6f6f">
+                                          <font>
+                                              <Font name="Cambria" size="14.0" />
+                                          </font>
+                                      </Label>
+                                  </children>
+                              </HBox>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Label text="Your Tracking number is: " textFill="#6f6f6f">
+                                 <font>
+                                    <Font name="Cambria" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="trackingNumber" layoutX="87.0" layoutY="10.0" onMouseClicked="#copyTrackingNumber" text="2021510100">
+                                 <font>
+                                    <Font name="Cambria Bold" size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Label text="Click Tracking number to copy" />
+                        <Button mnemonicParsing="false" onMouseClicked="#printInvoice" prefHeight="39.0" prefWidth="103.0" styleClass="search-button" text="Print" textAlignment="CENTER" textFill="WHITE">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                        </Button>
+                  <Label onMouseClicked="#backToShop" text="Back to Shop">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Cambria" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                    </children>
+                    <styleClass>
+                        <String fx:value="form" />
+                        <String fx:value="shadow" />
+                    </styleClass>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
